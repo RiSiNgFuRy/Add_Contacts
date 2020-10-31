@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <fragment
+            android:id="@+id/listFrag"
+            android:name="com.project_work.fragmentswithrecyclerview.ListFrag"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:layout="@layout/listfrag" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <fragment
+                android:id="@+id/detailFrag"
+                android:name="com.project_work.fragmentswithrecyclerview.DetailFrag"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                tools:layout="@layout/detailfrag" />
+
+            <fragment
+                android:id="@+id/addCont"
+                android:name="com.project_work.fragmentswithrecyclerview.AddCont"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                tools:layout="@layout/addcont" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
